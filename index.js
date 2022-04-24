@@ -57,7 +57,7 @@ const bufferString = function (url) {
 const server = http.createServer(serverHandler);
 
 async function serverHandler(req, response) {
-  if (req.method === 'GET' && req.url === '/notes') {
+  if (req.method === 'GET' && req.url === '/getTimeStories') {
     try {
       let result = await bufferString('https://time.com/');
       response.statusCode = 200;
